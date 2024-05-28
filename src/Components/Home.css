@@ -32,8 +32,8 @@
   
   .product-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between; 
   }
   
   .product-item {
@@ -42,7 +42,7 @@
     border: 1px solid #ddd;
     margin: 10px;
     text-align: center;
-    width: calc(33.333% - 40px);
+    width: calc(33.333% - 20px); 
     box-sizing: border-box;
   }
   

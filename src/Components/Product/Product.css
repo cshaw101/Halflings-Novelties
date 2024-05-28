@@ -1,4 +1,4 @@
-/* Components/Product.css */
+
 .product-item {
     background: #fff;
     padding: 20px;
@@ -10,9 +10,13 @@
   }
   
   .product-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-width: 300px; 
+    max-height: 300px; 
+    object-fit: cover; 
   }
+  
   
   .product-item h3 {
     margin: 10px 0;
@@ -34,4 +38,6 @@
   .product-item button:hover {
     background-color: #555;
   }
+
+  
   
