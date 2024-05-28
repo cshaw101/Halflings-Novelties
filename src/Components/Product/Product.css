@@ -1,0 +1,37 @@
+/* Components/Product.css */
+.product-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-item h3 {
+    margin: 10px 0;
+  }
+  
+  .product-item p {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .product-item button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .product-item button:hover {
+    background-color: #555;
+  }
+  
