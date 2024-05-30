@@ -17,16 +17,13 @@ const Home = () => {
     { id: 4, name: 'POKEMON TCG: Scarlet and Violet: PALDEAN Fates', price: 22.99, image: image4 },
     { id: 5, name: 'Pokemon TCG: Crown Zenith Elite Trainer Box', price: 49.30, image: image5 },
     { id: 6, name: 'Pokemon TCG: XY Evolutions,', price: 29.77, image: image6 },
-  
-    
-    // Add more products as needed
   ];
 
   return (
     <div className="home-container">
       <section className="banner">
         <h2>Welcome to Halflings Novelties</h2>
-        <p>Discover the best novelties in town!</p>
+        <p>We sell Cards and Other Stuff!</p>
       </section>
       
       <section className="products" id="products">
@@ -34,7 +31,8 @@ const Home = () => {
         <div className="product-list">
           {products.map(product => (
             <Product 
-              key={product.id} 
+              key={product.id}
+              id={product.id}
               image={product.image} 
               name={product.name} 
               price={product.price} 

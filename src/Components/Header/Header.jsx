@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './header.css';
+import { CartContext } from '../Cart/CartContext';
+import './Header.css';
 
 const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
+  const { cart } = useContext(CartContext);
+
+  // Calculate the total number of items in the cart
+  const cartItemCount = cart.reduce((count, item) => count + item.quantity, 0);
 
   const toggleSearch = () => {
     setSearchOpen(!searchOpen);
@@ -22,24 +27,26 @@ const Header = () => {
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </nav>
-      <div className='searchbar'>
-        {searchOpen ? (
-          <input
-            type="text"
-            placeholder="Search for products..."
-            className="search-input"
-            onBlur={() => setSearchOpen(false)}
-            autoFocus
-          />
-        ) : (
-          <FontAwesomeIcon
-            icon={faSearch}
-            className="search-icon"
-            onClick={toggleSearch}
-          />
-        )}
-        <div className="cart-icon">
-          <Link to="/cart">Cart (0)</Link>
+      <div className='search-cart-container'>
+        <div className='searchbar'>
+          {searchOpen ? (
+            <input
+              type="text"
+              placeholder="Search for products..."
+              className="search-input"
+              onBlur={() => setSearchOpen(false)}
+              autoFocus
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="search-icon"
+              onClick={toggleSearch}
+            />
+          )}
+        </div>
+        <div className='cart-icon'>
+          <Link to="/cart">Cart({cartItemCount})</Link>
         </div>
       </div>
     </header>

@@ -1,0 +1,101 @@
+/* global.css */
+
+/* Font */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a summer-inspired font */
+  }
+  
+  /* Colors */
+  :root {
+    --primary-color: #2ecc71; /* Green */
+    --secondary-color: #3498db; /* Blue */
+    --accent-color: #f1c40f; /* Yellow */
+    --text-color: #34495e; /* Dark gray text */
+  }
+  
+  /* Header */
+  .header {
+    background-color: var(--primary-color); /* Use primary color for header background */
+    color: #fff; /* White text color */
+  }
+  
+  /* Logo */
+  .logo a {
+    color: #fff; /* White text color for logo */
+  }
+  
+  /* Navigation */
+  .navBar a {
+    color: #fff; /* White text color for nav links */
+  }
+  
+  /* Search bar */
+  .searchbar {
+    margin-right: 15px;
+  }
+  
+  .search-input {
+    background-color: #fff; /* White background */
+    color: var(--text-color); /* Dark gray text color */
+  }
+  
+  /* Cart icon */
+  .cart-icon {
+    margin-right: 30px;
+  }
+  
+  /* Home page */
+  .home-container {
+    background-color: #fff; /* White background */
+  }
+  
+  .banner {
+    background-color: var(--secondary-color); /* Use secondary color for banner background */
+    color: #fff; /* White text color */
+  }
+  
+  .banner h2 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .banner p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+  }
+  
+  /* Product */
+  .product-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-item h3 {
+    margin: 10px 0;
+  }
+  
+  .product-item p {
+    font-size: 1.2em;
+    color: var(--text-color); /* Use dark gray text color */
+  }
+  
+  .product-item button {
+    background-color: var(--accent-color); /* Use accent color for button background */
+    color: #fff; /* White button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .product-item button:hover {
+    background-color: #f39c12; /* Darker shade of yellow on hover */
+  }
+  
